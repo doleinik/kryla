@@ -1,0 +1,78 @@
+@import "../../../assets/scss";
+
+.about_us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: px2vw(190);
+    padding-bottom: px2vw(250);
+    padding-left: px2vw(330);
+    padding-right: px2vw(200);
+    position: relative;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='870' viewBox='0 0 1920 870' fill='none'%3E%3Cpath d='M-25 1053C401.666 1103.36 747.553 964.471 953.458 657.8C1213.5 270.5 1337 167.5 1411 247C1488.34 330.084 1646.5 591.5 1787 354L1977.5 1' stroke='%23E6E8EA' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M-25 1053C401.666 1103.36 747.553 964.471 953.458 657.8C1213.5 270.5 1337 167.5 1411 247C1488.34 330.084 1646.5 591.5 1787 354L1977.5 1' stroke='white' stroke-opacity='0.6' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") bottom/contain no-repeat;
+
+    .text_content {
+        width: px2vw(335);
+        position: relative;
+
+        .line {
+            position: absolute;
+            width: px2vw(168);
+            display: flex;
+            top: px2vw(-25);
+            left: px2vw(-42);
+            z-index: -1;
+
+            svg {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .title {
+            mark {
+                color: var(--light_blue);
+
+                &:last-of-type {
+                    color: var(--yellow);
+                }
+            }
+        }
+
+        .description {
+            color: var(--dark_blue);
+            opacity: 0.7;
+            margin-top: px2vw(22);
+        }
+
+        .link {
+            margin-top: px2vw(60);
+        }
+    }
+
+    .grid {
+        grid-column-gap: px2vw(42);
+        width: px2vw(870);
+        align-items: flex-start;
+
+        .icon {
+            flex-direction: column;
+            gap: px2vw(96);
+            padding: px2vw(55) px2vw(24);
+            // background: var(--grey_gradient);
+            background: #FAF9F9;
+
+            &:nth-child(1) {
+                transform: translateY(px2vw(40));
+            }
+
+            &:nth-child(2) {
+                transform: translateY(px2vw(130));
+            }
+
+            &:nth-child(3) {
+                transform: translateY(px2vw(-90));
+            }
+        }
+    }
+}

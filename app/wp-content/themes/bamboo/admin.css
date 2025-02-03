@@ -1,0 +1,52 @@
+.wp-admin #edittag {
+  max-width: unset;
+}
+
+/* User profile */
+#your-profile h2 {
+  display: none;
+}
+
+#your-profile .user-rich-editing-wrap {
+  display: none;
+}
+
+#your-profile .user-admin-color-wrap {
+  display: none;
+}
+
+#your-profile .user-comment-shortcuts-wrap {
+  display: none;
+}
+
+#your-profile .user-admin-bar-front-wrap {
+  display: none;
+}
+
+#your-profile .user-language-wrap {
+  display: none;
+}
+
+#your-profile .user-description-wrap {
+  display: none;
+}
+
+#your-profile .user-profile-picture {
+  display: none;
+}
+
+#your-profile .user-url-wrap {
+  display: none;
+}
+
+#your-profile .user-generate-reset-link-wrap {
+  display: none;
+}
+
+#your-profile #application-passwords-section {
+  display: none;
+}
+
+.resetpassword {
+  display: none !important;
+}

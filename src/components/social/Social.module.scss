@@ -1,0 +1,18 @@
+@import "../../assets/scss";
+
+.social {
+    display: inline-flex;
+
+    .i {
+        display: inline-flex;
+
+        &:not(:last-of-type) {
+            margin-right: clamp(20px, px2vw(24), 30px);
+        }
+
+        svg {
+            height: clamp(20px, px2vw(22), 24px);
+            width: auto;
+        }
+    }
+}

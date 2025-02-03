@@ -1,0 +1,37 @@
+@import "../../assets/scss";
+
+.button {
+    padding: px2vw(14) px2vw(40);
+    border: 2px solid #e7e9eb;
+    border-radius: 18px;
+    position: relative;
+    // overflow: hidden;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+    z-index: 2;
+    display: inline-flex;
+    justify-content: center;
+    background: transparent;
+    // min-width: px2vw(220);
+
+    // &::after {
+    //     position: absolute;
+    //     content: "";
+    //     top: 50%;
+    //     left: 50%;
+    //     width: calc(100% + 4px);
+    //     height: calc(100% + 4px);
+    //     transform: translate(-50%, -50%);
+    //     z-index: -1;
+    //     background: var(--gold_gradient);
+    //     opacity: 0;
+    //     transition: opacity 0.3s ease-in-out;
+    //     border-radius: 18px;
+    //     pointer-events: none;
+    // }
+
+    &:hover {
+        border-color: transparent;
+        color: var(--white);
+        background-color: var(--yellow);
+    }
+}

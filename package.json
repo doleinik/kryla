@@ -1,0 +1,104 @@
+{
+  "name": "bamboo",
+  "private": true,
+  "version": "3.0.0",
+  "author": "Bambuk studio",
+  "scripts": {
+    "app-install": "gulp app-create && cd app && yo wordpress && gulp app-run",
+    "app-setup": "gulp app-setup",
+    "start": "set NODE_ENV=development && webpack --mode=development --watch",
+    "build": "set NODE_ENV=production && webpack --mode=production",
+    "update": "yarn --ignore-optional && yarn start"
+  },
+  "dependencies": {
+    "@react-oauth/google": "^0.8.0",
+    "@tinymce/tinymce-react": "^4.3.0",
+    "axios": "^1.3.4",
+    "body-scroll-lock": "^4.0.0-beta.0",
+    "file-type": "^18.2.1",
+    "modern-normalize": "^1.1.0",
+    "react": "^18.2.0",
+    "react-calendar": "^4.3.0",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-dom": "^18.2.0",
+    "react-facebook-login": "^4.1.1",
+    "react-lazy-load-image-component": "^1.5.6",
+    "react-phone-number-input": "^3.2.19",
+    "react-router-dom": "^6.8.1",
+    "react-tinymce": "^0.7.0",
+    "swiper": "^8.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.18.9",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/runtime": "^7.18.9",
+    "autoprefixer": "^10.4.14",
+    "babel-loader": "^9.1.2",
+    "browser-sync": "^2.29.1",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "cli-color": "^2.0.1",
+    "clui": "^0.3.6",
+    "css-loader": "^6.5.1",
+    "css-minimizer-webpack-plugin": "^5.0.0",
+    "del": "^6.0.0",
+    "fs-extra": "^11.1.1",
+    "graphql": "^16.6.0",
+    "graphql-tag": "^2.12.6",
+    "gulp": "^4.0.2",
+    "gulp-load-plugins": "^2.0.7",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.3",
+    "image-minimizer-webpack-plugin": "^3.8.2",
+    "imagemin": "^8.0.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^10.0.1",
+    "imagemin-webp": "^8.0.0",
+    "mini-css-extract-plugin": "^2.7.5",
+    "node-loader": "^2.0.0",
+    "node-ssh": "^12.0.5",
+    "normalize.css": "^8.0.1",
+    "open": "^8.4.0",
+    "path-browserify": "^1.0.1",
+    "postcss": "^8.4.5",
+    "postcss-import": "^15.1.0",
+    "postcss-loader": "^7.1.0",
+    "postcss-preset-env": "^8.2.0",
+    "prompts": "^2.4.2",
+    "react-svg-loader": "^3.0.3",
+    "sass": "^1.60.0",
+    "sass-loader": "^13.2.2",
+    "webp-in-css": "^0.7.0",
+    "webpack": "^5.77.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-graphql-loader": "^1.0.2"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/react"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

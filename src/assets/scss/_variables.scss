@@ -1,0 +1,19 @@
+:root {
+    // Colors
+    --white: #fff;
+    --black: #000;
+
+    --dark: #141416;
+    --light_blue: #3A8DDE;
+    --dark_blue: #00487D;
+    --yellow: #FFC72C;
+    --grey: #B7C3CB;
+    --green: #76BC21;
+    --red: #E80A3F;
+
+
+    // gradient only
+    --grey_gradient: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+        linear-gradient(0deg, #f8f8f8, #f8f8f8), #faf9f9;
+    --gold_gradient: linear-gradient(-90deg, #fd9e3a, rgba(250, 197, 0, 1));
+}

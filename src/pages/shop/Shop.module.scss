@@ -1,0 +1,185 @@
+@import "../../assets/scss";
+
+.shop {
+    display: flex;
+    flex-direction: column;
+    gap: px2vw(60);
+    padding: px2vw(205) px2vw(200) px2vw(120);
+    min-height: 100vh;
+
+    .text_content {
+        display: flex;
+        flex-direction: column;
+        max-width: px2vw(540);
+        gap: px2vw(20);
+
+        .title,
+        .subtitle {
+            color: var(--dark_blue);
+        }
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: px2vw(60) px2vw(40);
+    }
+
+    .no_res {
+        display: grid;
+        height: 100%;
+        place-content: center;
+        flex: 1;
+        padding: px2vw(100);
+
+        h4 {
+            color: var(--grey);
+        }
+    }
+
+    .load_more {
+        justify-content: center;
+        gap: px2vw(18);
+        align-items: center;
+        border-color: transparent;
+        background: #FAF9F9;
+
+        .arrow {
+            display: flex;
+            transform: rotate(90deg);
+
+            svg path {
+                transition: 0.3s ease-in-out;
+            }
+        }
+
+        &:hover {
+            background: var(--dark_blue);
+
+            svg path {
+                stroke: var(--white);
+            }
+        }
+    }
+}
+
+.gift {
+    width: auto;
+
+    .icon {
+        width: 100%;
+        height: px2vw(375);
+        display: flex;
+        border-radius: px2vw(12);
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .information {
+        padding-top: px2vw(24);
+
+        .price {
+            color: var(--dark_blue);
+            margin-bottom: px2vw(8);
+        }
+
+        .buttons {
+            margin-top: px2vw(32);
+
+            button {
+                min-width: auto;
+            }
+        }
+    }
+}
+
+.more_details {
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: px2vw(40);
+    }
+
+    .icon {
+        width: 100%;
+        display: flex;
+        max-height: px2vw(660);
+        overflow: hidden;
+        border-radius: px2vw(12);
+
+        span {
+            display: flex;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+    }
+
+    .information {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: px2vw(24);
+        color: var(--dark_blue);
+
+        .buttons {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+
+}
+
+
+.skeleton {
+
+
+    .information {
+
+
+        .title {
+            height: 2.6em;
+        }
+
+        .price {
+            width: 45%;
+            height: 1.3em;
+        }
+
+        .buttons {
+            height: 3.5em;
+            width: 50%;
+        }
+
+    }
+}
+
+
+.bg {
+    background: #EBEDEF;
+    border-radius: 16px;
+    animation: skeleton-loading .8s linear infinite alternate;
+
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: #EBEDEF;
+    }
+
+    100% {
+        background-color: #ebedef5e;
+    }
+}

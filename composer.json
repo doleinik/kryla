@@ -1,0 +1,19 @@
+{
+  "name": "bambuk/composer",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "config": {
+    "vendor-dir": "app/vendor"
+  },
+  "require": {
+    "vlucas/phpdotenv": "^5.5",
+    "respect/validation": "^2.2",
+    "firebase/php-jwt": "^6.4",
+    "liqpay/liqpay": "^1.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Bamboo\\Core\\": "wp-content/themes/bamboo/core/"
+    }
+  }
+}

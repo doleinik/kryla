@@ -1,0 +1,172 @@
+#root {
+    position: relative;
+    z-index: 1;
+}
+
+html,
+body {
+    @include no-scrollbar;
+    font-family: var(--lato_r);
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    display: inline-flex;
+    padding: 0;
+    font-family: var(--nunito_b);
+    line-height: 150%;
+
+    &[disabled] {
+        pointer-events: none;
+        border-color: transparent;
+        background: #ebedef !important;
+        color: #d1d5da !important;
+
+        svg path {
+            stroke: #ebedef;
+        }
+    }
+}
+
+.link {
+    @include font_button;
+}
+
+a,
+button {
+    &.yellow_button {
+        background: var(--yellow);
+        color: var(--white);
+        border-color: transparent;
+
+        &:hover {
+            background: #faf9f9;
+            color: var(--yellow);
+        }
+    }
+    &.white_button {
+        background: var(--white);
+        border-color: transparent;
+
+        // &:hover {
+        //     background: #FAF9F9;
+        //     color: var(--yellow);
+        // }
+    }
+
+    &.dark_button {
+        background: var(--dark_blue);
+        color: var(--white);
+        border-color: transparent;
+
+        &:hover {
+            background: transparent;
+            color: var(--dark_blue);
+            border-color: var(--dark_blue);
+        }
+    }
+
+    &.light_button {
+        background: #f4f7fd;
+        color: var(--light_blue);
+        border-color: transparent;
+
+        &:hover {
+            background: transparent;
+            color: var(--light_blue);
+            border-color: var(--light_blue);
+        }
+    }
+
+    &.red_button {
+        background: rgba(255, 199, 212, 0.2);
+        color: var(--red);
+        border-color: transparent;
+
+        &:hover {
+            background: var(--red);
+            color: var(--white);
+            // border-color: var(--light_blue);
+        }
+    }
+}
+
+mark {
+    background: none;
+}
+
+.slider_projects.swiper {
+    overflow: visible;
+
+    .swiper-scrollbar {
+        width: 100%;
+        background: #c0cad2;
+        height: 2px;
+        opacity: 0.3;
+        margin-top: px2vw(60);
+
+        &-drag {
+            height: 100%;
+            background: #1e4f7e;
+            border-radius: 14px;
+        }
+    }
+}
+
+.page404 {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.react-calendar.calendar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    color: var(--dark_blue);
+    font-family: var(--nunito_b);
+
+    .react-calendar__month-view__days__day--neighboringMonth {
+        color: var(--grey);
+    }
+
+    .react-calendar__month-view__weekdays__weekday {
+        // color: var(--yellow);
+    }
+
+    button {
+        display: block;
+        color: var(--dark_blue);
+
+        &.react-calendar__tile--active {
+            color: var(--white);
+        }
+    }
+
+    .react-calendar__tile--now {
+        background-color: var(--yellow);
+    }
+    .react-calendar__tile--active {
+        background-color: var(--light_blue);
+    }
+}

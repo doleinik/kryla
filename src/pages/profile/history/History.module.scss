@@ -1,0 +1,91 @@
+@import "../../../assets/scss";
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: px2vw(60);
+    width: 100%;
+
+    .tabs {
+        display: flex;
+        gap: px2vw(50);
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), #e6e8ea;
+        }
+
+        .tab {
+            color: #c0cad2;
+            padding: 0 0 px2vw(25);
+            font-family: var(--nunito_b);
+            font-size: clamp(14px, px2vw(15), 16px);
+            line-height: 178%;
+            position: relative;
+            transition: color 0.3s ease-in-out;
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 2px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: var(--dark_blue);
+                border-radius: 50px;
+                z-index: 2;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+
+            &.active,
+            &:hover {
+                color: var(--dark_blue);
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .grid {
+        display: grid;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: px2vw(60) px2vw(40);
+
+        .history_icon {
+            width: auto;
+        }
+    }
+
+    .load_more {
+        justify-content: center;
+        gap: px2vw(18);
+        align-items: center;
+        border-color: transparent;
+        background: var(--grey_gradient);
+
+        .arrow {
+            display: flex;
+            transform: rotate(90deg);
+
+            svg path {
+                transition: 0.3s ease-in-out;
+            }
+        }
+
+        &:hover {
+            svg path {
+                stroke: var(--white);
+            }
+        }
+    }
+}

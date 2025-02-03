@@ -1,0 +1,29 @@
+@import "../../../assets/scss";
+
+.fond_project {
+    padding: px2vw(135) 0 px2vw(75) px2vw(200);
+    background: var(--grey_gradient);
+
+    .text_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: px2vw(200);
+
+        .title {
+            color: var(--light_blue);
+        }
+    }
+
+    .projects {
+        margin-top: px2vw(60);
+        padding-right: px2vw(200);
+        overflow: hidden;
+
+        .project_slide {
+            width: auto;
+            display: flex;
+            gap: px2vw(40);
+        }
+    }
+}

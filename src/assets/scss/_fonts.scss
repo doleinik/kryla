@@ -1,0 +1,133 @@
+// @include font-face("TIMMONS NY", "TIMMONSNY", 400, normal, woff2);
+
+@include font-face("Inter Bold", "Inter_700", 700, normal, ttf);
+
+@include font-face("Lato Regular", "Lato_400", 400, normal, ttf);
+@include font-face("Lato Bold", "Lato_700", 700, normal, ttf);
+
+@include font-face("Nunito SemiBold", "Nunito_600", 600, normal, ttf);
+@include font-face("Nunito Bold", "Nunito_700", 700, normal, ttf);
+
+// $bebas-neue: "Bebas Neue", cursive;
+
+:root {
+  --inter_b: "Inter Bold", sans-serif;
+  --lato_r: "Lato Regular", sans-serif;
+  --lato_b: "Lato Bold", sans-serif;
+  --nunito_sb: "Nunito SemiBold", sans-serif;
+  --nunito_b: "Nunito Bold", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+@mixin font_h1 {
+  font-family: var(--inter_b);
+  font-size: px2vw(60);
+  line-height: 110%;
+  letter-spacing: -0.01em;
+}
+
+@mixin font_h2 {
+  font-family: var(--lato_b);
+  font-size: px2vw(48);
+  line-height: 120%;
+}
+
+@mixin font_h3 {
+  font-family: var(--nunito_b);
+  font-size: px2vw(24);
+  line-height: 128%;
+}
+
+@mixin font_h4 {
+  font-family: var(--nunito_b);
+  font-size: px2vw(22);
+  line-height: 128%;
+  letter-spacing: -0.02em;
+}
+
+@mixin font_h5 {
+  font-family: var(--lato_b);
+  font-size: px2vw(38);
+  line-height: 130%;
+}
+
+@mixin font_h6 {
+  font-family: var(--nunito_b);
+  font-size: px2vw(28);
+  line-height: 100%;
+}
+
+@mixin font_p {
+  font-family: var(--lato_r);
+  font-size: clamp(13px, px2vw(15), 17px);
+  line-height: 150%;
+}
+
+@mixin font_b {
+  font-family: var(--lato_b);
+}
+
+@mixin font_small {
+  font-family: var(--lato_b);
+  font-size: clamp(12px, px2vw(14), 16px);
+  line-height: 122%;
+}
+
+@mixin font_button {
+  font-family: var(--nunito_b);
+  font-size: clamp(13px, px2vw(16), 19px);
+  color: var(--dark_blue);
+  line-height: 150%;
+
+}
+
+@mixin font_button_small {
+  font-family: var(--nunito_b);
+  font-size: clamp(14px, px2vw(15), 16px);
+  color: var(--dark_blue);
+  line-height: 176%;
+
+}
+
+h1 {
+  @include font_h1;
+
+  &.small {
+    @include font_h2;
+  }
+}
+
+h2 {
+  @include font_h2();
+}
+
+h3 {
+  @include font_h3();
+}
+
+h4 {
+  @include font_h4();
+  color: var(--dark_blue);
+}
+
+h5 {
+  @include font_h5();
+}
+
+h6 {
+  @include font_h6();
+}
+
+
+p {
+  @include font_p();
+}

@@ -1,0 +1,12 @@
+{
+  "siteName": "kryla",
+  "themeName": "bamboo",
+  "url": {
+    "loc": "http://kryla.loc",
+    "test": "https://tests.bambus.com.ua/kryla",
+    "prod": "https://"
+  },
+  "dbPrefix": "bb_",
+  "dbCharSet": "utf8mb4",
+  "dbCollate": "utf8mb4_unicode_ci"
+}

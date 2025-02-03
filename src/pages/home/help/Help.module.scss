@@ -1,0 +1,28 @@
+@import "../../../assets/scss";
+
+.need_help {
+    padding: px2vw(130) 0 px2vw(165) px2vw(200);
+
+    .text_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: px2vw(200);
+
+        .title {
+            color: var(--light_blue);
+        }
+    }
+
+    .projects {
+        margin-top: px2vw(60);
+        padding-right: px2vw(200);
+        overflow: hidden;
+
+        .project_slide {
+            width: auto;
+            display: flex;
+            gap: px2vw(40);
+        }
+    }
+}

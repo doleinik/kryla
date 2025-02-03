@@ -1,0 +1,124 @@
+@import "../../assets/scss";
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: px2vw(64);
+    padding: px2vw(208) px2vw(200) px2vw(128);
+    background: var(--grey_gradient);
+
+    .text_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .title {
+            color: var(--light_blue);
+
+            &::first-line {
+                color: var(--yellow);
+            }
+        }
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: px2vw(60) px2vw(40);
+        grid-template-areas:
+            "f f f s s s"
+            ". . . . . .";
+
+        &_icon,
+        .skeleton {
+            width: auto;
+
+            &:nth-child(1) {
+                grid-area: f;
+            }
+
+            &:nth-child(2) {
+                grid-area: s;
+            }
+
+            &:nth-child(n + 3) {
+                grid-column: span 2;
+            }
+        }
+    }
+
+    .load_more {
+        justify-content: center;
+        gap: px2vw(18);
+        align-items: center;
+        border-color: transparent;
+        background-color: var(--white);
+
+        .arrow {
+            display: flex;
+            transform: rotate(90deg);
+
+            svg path {
+                transition: 0.3s ease-in-out;
+            }
+        }
+
+        &:hover {
+
+            background: var(--dark_blue);
+
+
+            svg path {
+                stroke: var(--white);
+            }
+        }
+    }
+
+    .skeleton {
+        min-height: px2vw(590);
+
+        .bg {
+            background: #EBEDEF;
+            border-radius: 16px;
+            animation: skeleton-loading .8s linear infinite alternate;
+
+        }
+
+        .icon {
+            width: 100%;
+            height: px2vw(440);
+        }
+
+        .information {
+            padding: px2vw(24);
+
+            h4 {
+                height: 2em;
+            }
+
+            .buttons {
+                margin-top: px2vw(24);
+                display: flex;
+                justify-content: space-between;
+
+                .b {
+                    height: px2vw(56);
+                    width: 45%;
+                }
+
+            }
+
+        }
+    }
+}
+
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: #EBEDEF;
+    }
+
+    100% {
+        background-color: #ebedef5e;
+    }
+}

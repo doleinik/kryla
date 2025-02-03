@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сторінку не знайдено &#8211; Крила Надії</title>
+<meta name='robots' content='noindex, nofollow' />
+<link rel='stylesheet' id='styles-css' href='http://kryla.loc/wp-content/themes/bamboo/assets/css/styles.css?ver=0.84699100%201678977277' media='all' />
+<link rel="https://api.w.org/" href="http://kryla.loc/wp-json/" /></head>
+<body>
+  <div id="root"></div>
+  <script id='scripts-js-extra'>
+var BAMBOO = {"baseUrl":"http:\/\/kryla.loc","ajaxUrl":"http:\/\/kryla.loc\/wp-admin\/admin-ajax.php","assets":"http:\/\/kryla.loc\/wp-content\/themes\/bamboo\/assets\/","restapi":"http:\/\/kryla.loc\/wp-json\/wings\/v1\/","graphql":"http:\/\/kryla.loc\/graphql","nonce":"0f8f2370ad"};
+</script>
+<script src='http://kryla.loc/wp-content/themes/bamboo/assets/js/scripts.js?ver=0.84699100%201678977277' id='scripts-js'></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+query SiteData {
+  pages(first: 100, where: { status: PUBLISH }) {
+    edges {
+      node {
+        databaseId
+        title
+        slug
+        isFrontPage
+        pageOptions {
+          template
+          isArchive
+        }
+      }
+    }
+  }
+  menus {
+    nodes {
+      name
+      locations
+      menuItems {
+        edges {
+          node {
+            label
+            url
+            uri
+            target
+          }
+        }
+      }
+    }
+  }
+  allSettings {
+    generalSettingsTitle
+    generalSettingsUrl
+    generalSettingsLanguage
+  }
+  contactsPage {
+    pageContent {
+      addresses {
+        address
+      }
+      socials {
+        link
+        title
+      }
+    }
+  }
+}

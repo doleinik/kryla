@@ -1,0 +1,96 @@
+@import "../../../assets/scss";
+
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    padding: px2vw(125) px2vw(330);
+    gap: px2vw(90);
+    background: #FAF9F9;
+
+    .text_content {
+        .title {
+            color: var(--dark_blue);
+        }
+    }
+
+    .grid {
+        display: flex;
+        flex-direction: column;
+
+        .q {
+            position: relative;
+            color: var(--dark_blue);
+            border-bottom: 2px dashed #1e4f7e33;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            padding: px2vw(24) 0;
+            padding-left: px2vw(60);
+            // position: relative;
+            cursor: pointer;
+
+            * {
+                pointer-events: none;
+            }
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 2px;
+                position: absolute;
+                left: 0;
+                bottom: -2px;
+                background-color: #ced8e1;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+
+            .ico {
+                position: absolute;
+                left: 0;
+                transition: transform 0.3s ease-in-out;
+
+                svg {
+                    path {
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+            }
+
+            &.active {
+                .ico {
+                    transform: rotate(45deg);
+                }
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+
+            &:hover,
+            &.active {
+                svg {
+                    path {
+                        fill: var(--yellow);
+                    }
+                }
+            }
+        }
+
+        .panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            width: 70%;
+            padding-left: px2vw(60);
+
+            p {
+                padding-bottom: px2vw(24);
+                // color: #CED8E1;
+            }
+        }
+    }
+}

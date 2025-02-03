@@ -1,0 +1,43 @@
+@import "../../../assets/scss";
+
+.direct_help {
+    display: flex;
+    flex-direction: column;
+    gap: px2vw(84);
+    padding: px2vw(180) px2vw(330);
+
+    .text_content {
+        max-width: px2vw(560);
+
+        .title {
+            color: var(--light_blue);
+        }
+
+        .subtitle {
+            margin-top: px2vw(24);
+            color: var(--dark_blue);
+        }
+    }
+
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: px2vw(14) px2vw(130);
+
+        .list {
+            width: px2vw(520);
+            display: flex;
+
+            &::before {
+                content: "";
+                display: block;
+                height: calc(1em * 1.28);
+                width: clamp(15px, px2vw(17), 19px);
+                background-color: red;
+                flex: none;
+                margin-right: px2vw(24);
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='11' viewBox='0 0 17 11' fill='none'%3E%3Cpath d='M0 4.06522V6.93478H11L6.97368 11H11L16.4474 5.5L11 0H6.97368L11 4.06522H0Z' fill='%23FF671D'/%3E%3C/svg%3E") center/contain no-repeat;
+            }
+        }
+    }
+}

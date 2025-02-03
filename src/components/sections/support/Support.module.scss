@@ -1,0 +1,48 @@
+@import "../../../assets/scss";
+
+.support {
+    background: #FAF9F9;
+    padding: px2vw(190) px2vw(200);
+    display: flex;
+    flex-direction: column;
+    gap: px2vw(90);
+    position: relative;
+
+    &::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        pointer-events: none;
+
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='828' viewBox='0 0 1920 828' fill='none'%3E%3Cpath opacity='0.06' d='M-147.205 834.59C79.4453 853.119 331.312 489.757 539.044 506.739C630.284 514.198 639.206 501.892 594.606 603.131C550.006 704.37 672.178 881.458 816.13 677.157C862.811 610.905 922.542 519.448 983.222 420.788C1098.46 248.344 1280.01 95.8657 1407.61 227.132C1623.94 449.693 1621.34 694.363 1772.61 428.631C1905.24 195.626 2156.11 -195.638 2134.26 17.0123' stroke='%231E4F7E' stroke-width='4'/%3E%3C/svg%3E") bottom/contain no-repeat;
+    }
+
+    .text_content {
+        position: relative;
+        z-index: 1;
+
+        .title {
+            color: var(--light_blue);
+        }
+
+        .link {
+            margin-top: px2vw(42);
+        }
+    }
+
+    .grid {
+        grid-column-gap: px2vw(40);
+        position: relative;
+        z-index: 2;
+
+        .icon {
+            background-color: var(--white);
+            padding: px2vw(45) px2vw(24);
+            gap: px2vw(30);
+            min-height: px2vw(200);
+        }
+    }
+}

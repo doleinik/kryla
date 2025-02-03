@@ -1,0 +1,204 @@
+@import "../../assets/scss";
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    padding: px2vw(205) px2vw(200) px2vw(100);
+    // background: var(--grey_gradient);
+    min-height: 100vh;
+
+    .text_content {
+        align-self: flex-end;
+        width: 75%;
+        display: flex;
+        justify-content: space-between;
+
+        .title {
+            color: var(--yellow);
+        }
+    }
+
+    .profile_content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: px2vw(40);
+
+        &__nav {
+            display: flex;
+            flex-direction: column;
+            gap: px2vw(60);
+            min-width: px2vw(260);
+
+            nav {
+                display: flex;
+                flex-direction: column;
+                gap: px2vw(8);
+
+                .nav_btn {
+                    justify-content: flex-start;
+                    padding: px2vw(18) px2vw(24);
+                    border: none;
+                    color: #c0cad2;
+                    position: relative;
+                    transition: 0.3s ease-in-out;
+                    border-radius: 18px;
+                    overflow: hidden;
+
+                    &::before,
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        opacity: 0;
+                        transition: 0.3s ease-in-out;
+                    }
+
+                    &::before {
+                        width: 14px;
+                        height: 10px;
+                        top: 50%;
+                        right: px2vw(24);
+                        transform: translateY(-50%);
+                        z-index: 1;
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='10' viewBox='0 0 14 10' fill='none'%3E%3Cpath d='M1 5H12M12 5L7.76923 1M12 5L7.76923 9' stroke='%23fbb517' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+                    }
+
+                    &:after {
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: -1;
+                        background: var(--grey_gradient);
+                    }
+
+                    &:hover,
+                    &.active {
+                        color: var(--dark_blue);
+
+                        &:before,
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+
+                    &.active {
+                        pointer-events: none;
+                    }
+                }
+            }
+
+            .buttons {
+                display: flex;
+                flex-direction: column;
+                gap: px2vw(20);
+
+                .exit {
+                    background: var(--grey_gradient);
+                    border-color: transparent;
+                }
+            }
+        }
+
+        &__data {
+            width: 75%;
+        }
+    }
+}
+
+.data_content {
+    display: flex;
+    gap: px2vw(40);
+    width: 75%;
+
+    .avatar {
+        display: flex;
+        flex-direction: column;
+        gap: px2vw(20);
+
+        .icon {
+            width: px2vw(220);
+            height: px2vw(220);
+            border-radius: px2vw(12);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #EBEDEF;
+
+            svg {
+                width: clamp(40px, px2vw(50), 69px);
+                height: clamp(40px, px2vw(50), 69px);
+
+                path {
+                    fill: #B7C3CB;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .buttons {
+            display: flex;
+            gap: px2vw(12);
+
+
+
+            button {
+                border-radius: 18px;
+                background: #F4F7FD;
+                padding: px2vw(16);
+
+                &.remove {}
+
+                &.change {
+                    justify-content: center;
+                    flex: 1;
+                }
+            }
+        }
+    }
+
+    .labels {
+        display: flex;
+        flex-direction: column;
+        gap: px2vw(28);
+        width: 100%;
+
+        .save {
+            padding: px2vw(13) px2vw(32);
+            align-self: flex-start;
+        }
+    }
+}
+
+.pass_content {
+    display: flex;
+    flex-direction: column;
+    gap: px2vw(27);
+    width: 75%;
+
+    .title {
+        color: var(--dark_blue);
+    }
+
+    .description {
+        color: #c0cad2;
+    }
+
+    .save {
+        align-self: flex-start;
+        background: var(--dark_blue);
+        color: var(--white);
+        border-color: transparent;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            background: none;
+        }
+    }
+}

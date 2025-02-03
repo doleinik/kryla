@@ -1,0 +1,55 @@
+@import "../../../assets/scss";
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: px2vw(16);
+    width: 100%;
+
+    .subscription {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #f4f7fd;
+        padding: px2vw(24);
+        border-radius: 12px;
+
+        .info {
+            max-width: px2vw(580);
+        }
+
+        .title {
+            color: var(--dark_blue);
+        }
+        .description {
+            display: flex;
+            gap: px2vw(30);
+            margin-top: 8px;
+
+            p {
+                color: #c0cad2;
+
+                &.date span {
+                    color: var(--dark_blue);
+                }
+                &.sum span {
+                    color: var(--light_blue);
+                }
+
+                span {
+                    font-family: var(--lato_b);
+                    font-weight: 700;
+                    margin-left: px2vw(10);
+                }
+            }
+        }
+
+        .buttons {
+            display: flex;
+            gap: px2vw(14);
+
+            .btn {
+            }
+        }
+    }
+}

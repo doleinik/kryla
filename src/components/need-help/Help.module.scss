@@ -1,0 +1,136 @@
+@import "../../assets/scss";
+
+.help_icon {
+    width: px2vw(480);
+    border-radius: px2vw(12);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    .icon {
+        width: 100%;
+        height: px2vw(390);
+        display: flex;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .information {
+        padding-top: px2vw(24);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+
+        .money {
+            display: flex;
+            gap: px2vw(11);
+            font-family: var(--lato_b);
+            font-size: clamp(12px, px2vw(14), 16px);
+            color: #c0cad2;
+            font-weight: 700;
+
+            .now {
+                color: var(--yellow);
+            }
+        }
+
+        .finished {
+            display: flex;
+            align-items: center;
+            color: var(--green);
+            font-family: var(--lato_b);
+
+            .dot {
+                width: 8px;
+                height: 8px;
+                margin: px2vw(8);
+                background: var(--green);
+                border-radius: 50%;
+
+            }
+        }
+
+        .progress {
+            width: 100%;
+            height: 6px;
+            margin-top: px2vw(8);
+            background: #F6F6F7;
+            border-radius: 83px;
+            overflow: hidden;
+
+            .line {
+                height: 100%;
+                width: 30%;
+                background: var(--yellow);
+                border-radius: 83px;
+                overflow: hidden;
+            }
+        }
+
+        .title,
+        .subtitle {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .title {
+            margin-top: px2vw(24);
+        }
+
+        .subtitle {
+            margin-top: px2vw(8);
+            color: #C0CAD2;
+        }
+
+        .buttons {
+            display: flex;
+            margin-top: px2vw(24);
+            position: relative;
+            z-index: 2;
+            align-items: center;
+            justify-content: space-between;
+
+            button {
+                // min-width: px2vw(256);
+                background: #F4F7FD;
+                border-color: transparent;
+                min-width: auto;
+
+                &:hover {
+                    background: var(--yellow);
+                }
+            }
+
+            .link_more {
+                padding: px2vw(16) px2vw(24);
+                display: flex;
+                align-items: center;
+                gap: px2vw(8);
+                opacity: 0.5;
+                transition: opacity 0.3s ease-in-out;
+
+                span {
+                    display: flex;
+                    opacity: 0;
+                    transition: opacity 0.3s ease-in-out;
+                }
+
+                &:hover {
+                    opacity: 1;
+
+                    span {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

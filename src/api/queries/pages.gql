@@ -1,0 +1,14 @@
+query Pages {
+  pages(first: 100, where: { status: PUBLISH }) {
+    edges {
+      node {
+        title
+        slug
+        isFrontPage
+        pageOptions {
+          template
+        }
+      }
+    }
+  }
+}

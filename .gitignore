@@ -1,0 +1,27 @@
+# Editors config
+.idea
+*.sublime*
+.vscode
+
+# Packages
+node_modules/
+
+# Backup
+.backup/
+
+# ENV
+.env
+.env.*
+!.env.loc
+
+# misc
+*.log
+Thumbs.db
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# React theme
+app/wp-content/themes/bamboo/assets/

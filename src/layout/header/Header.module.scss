@@ -1,0 +1,113 @@
+@import "../../assets/scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: px2vw(12) px2vw(64);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 1001;
+  background: var(--white);
+
+  .left {
+    display: flex;
+    align-items: center;
+    gap: px2vw(64);
+  }
+
+  .links {
+    display: flex;
+    gap: px2vw(40);
+
+    a {
+      transition: .3s ease-in-out;
+
+      &:hover {
+        color: var(--light_blue);
+      }
+    }
+  }
+
+  .logo {
+    width: px2vw(128);
+
+    a {
+      display: flex;
+    }
+
+    img,
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .language {
+    color: var(--dark_blue);
+  }
+
+  * {
+    pointer-events: all;
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    gap: px2vw(24);
+  }
+
+  .enter {
+    display: flex;
+    align-items: center;
+    gap: px2vw(8);
+    padding: 0;
+
+    span {
+      display: flex;
+
+      svg {
+        width: clamp(20px, px2vw(24), 28px);
+        height: auto;
+      }
+    }
+
+    .p {
+      margin-left: px2vw(8);
+    }
+  }
+
+  .enter,
+  .profile {
+
+    .p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: clamp(44px, px2vw(48), 52px);
+      height: clamp(44px, px2vw(48), 52px);
+      border-radius: 50%;
+      background: #EBEDEF;
+      overflow: hidden;
+
+      svg path {
+        fill: #B7C3CB;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: px2vw(16);
+  }
+}

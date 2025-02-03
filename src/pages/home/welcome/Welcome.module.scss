@@ -1,0 +1,77 @@
+@import "../../../assets/scss";
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--white);
+    position: relative;
+    padding: px2vw(138) 0 px2vw(48);
+
+    &::before {
+        position: absolute;
+        top: px2vw(220);
+        left: 0;
+        width: 100%;
+        height: px2vw(307);
+        content: "";
+        pointer-events: none;
+        opacity: .4;
+        background: url("data:image/svg+xml,%3Csvg width='1922' height='309' viewBox='0 0 1922 309' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 167.461C168.828 40.8537 404.388 -24.329 449.532 10.1586C494.676 44.6462 400.701 102.261 320.351 154.236C240 206.21 228.023 328.513 402.218 232.408C415.143 225.277 434.923 215.262 449.532 206.21C578.034 138.913 921.575 -102.11 1013.04 70.9192C1041.14 124.093 1094.09 343.771 1181.32 302.982C1231.5 279.517 1560.5 -108.227 1547.6 51.2773C1535.92 195.58 1384.87 340.83 1510.86 287.489C1611.65 244.816 1787.74 137.818 1921 67.7698' stroke='%23FFC72C'/%3E%3C/svg%3E%0A") center/contain no-repeat;
+    }
+
+    .animation {
+        position: relative;
+        z-index: 2;
+        width: px2vw(1002);
+        display: flex;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .text_content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 2;
+        margin-top: px2vw(70);
+        text-align: center;
+        flex: 1;
+
+        .title {
+            line-height: 220%;
+            color: var(--dark_blue);
+            font-size: px2vw(22);
+            font-family: var(--lato_r);
+            font-weight: 400;
+            margin-bottom: px2vw(48);
+
+            &::first-line {
+                font-size: px2vw(36);
+                text-transform: uppercase;
+                font-family: var(--lato_b);
+                font-weight: 800;
+            }
+        }
+
+    }
+
+    .subtitle {
+        margin-top: px2vw(80);
+        color: #B7C3CB;
+        opacity: 0.7;
+        width: px2vw(450);
+        text-align: center;
+
+        p {
+            font-size: 12px;
+        }
+    }
+
+
+}

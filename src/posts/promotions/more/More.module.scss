@@ -1,0 +1,27 @@
+@import "../../../assets/scss/index";
+
+.more_share {
+    padding: px2vw(120) px2vw(200) px2vw(100);
+
+    .text_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title {
+            color: var(--light_blue);
+            font-size: px2vw(38);
+        }
+    }
+
+    .grid {
+        margin-top: px2vw(60);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: px2vw(40);
+
+        .more_icon {
+            width: auto;
+        }
+    }
+}

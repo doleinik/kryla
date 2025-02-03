@@ -1,0 +1,29 @@
+@import "../../assets/scss";
+
+.enter_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: px2vw(14) px2vw(20);
+    border: 2px solid #e7e9eb;
+    border-radius: 18px;
+    transition: 0.3s ease-in-out;
+    width: 100%;
+
+    .i {
+        width: clamp(20px, px2vw(24), 28px);
+        display: flex;
+        margin-right: px2vw(18);
+
+        svg {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &:hover {
+        border-color: transparent;
+        color: var(--white);
+        background-color: var(--yellow);
+    }
+}
